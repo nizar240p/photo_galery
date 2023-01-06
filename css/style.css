@@ -38,28 +38,58 @@ header {
     border-radius: 0.75rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    height: 100%;
+}
+
+.card-content:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .image-container {
+    postition: relative;
     height: 300px;
-    overflow: hidden;
-    border: 1px solid #f1f5f9;
 }
 
 img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .desc-container {
-    padding: 0.5rem 1rem 1rem;
+    padding: 1rem;
+    postition: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #10b981; // primary
+    transition-duration: 1000ms;
+}
+
+.card-content:hover .desc-container {
+    height: 100%;
+    bottom: 0;
 }
 
 .desc-title {
     font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: #1e293b;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: white;
+    margin: 0;
     text-transform: capitalize;
+}
+
+.desc-text {
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0;
 }
 
 /* Footer */
