@@ -7,14 +7,37 @@ body {
 
 /* Header */
 header {
-    padding-top: 9rem;
-    padding-bootom: 8rem;
-    background-color: #f1f5f9;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #e2e8f0 url('../img/wisata/img100.jpg') no-repeat fixed center;
+    background-size: cover;
+    transition-duration: 700ms;
+}
+
+.header-text {
+    color: white;
+    background-color: #0f172a;
+    padding: 1rem 0.5rem;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    z-index: 50;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    opacity: 0;
+    transition-duration: 700ms;
+}
+
+.startup {
+    left: 15%;
+    opacity: 100;
 }
 
 /* Main Galery */
 #main {
-    padding-top: 6rem;
+    padding-top: 8rem;
     padding-bottom: 8rem;
 }
 
@@ -46,33 +69,36 @@ header {
 }
 
 .image-container {
-    postition: relative;
-    height: 300px;
+    position: relative;
+    width: 100%;
+    height: 15rem;
 }
 
 img {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .desc-container {
+    opacity: 0%;
+    box-sizing: border-box;
     padding: 1rem;
-    postition: absolute;
-    bottom: -100%;
+    position: absolute;
+    bottom: 0;
     left: 0;
+    right: 0;
+    background-color: #1e3a8a;  // primary
+    overflow-y: auto;
     width: 100%;
-    height: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #10b981; // primary
-    transition-duration: 1000ms;
+    height: 0;
+    transition-duration: 700ms;
+    opacity: 0%;
 }
 
 .card-content:hover .desc-container {
     height: 100%;
+    opacity: 100%;
     bottom: 0;
 }
 
@@ -94,9 +120,44 @@ img {
 
 /* Footer */
 footer {
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 3rem;
     background-color: #1e293b;
+}
+
+.footer-container {
+    width: 100%;
+    padding-top: 2.5rem;
+    border-top: 1px solid #334155;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 0.75rem;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cbd5e1;
+    color: #cbd5e1;
+}
+
+.icon:hover {
+    border: 1px solid #1e3a8a;
+    background-color: #1e3a8a;
+    color: white;
+}
+
+svg {
+    fill: currentColor;
 }
 
 .footer-text {

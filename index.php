@@ -1,6 +1,7 @@
 <?php
 $img = array('anya','bleach','bluelock','bocchi','csm','deku','iamatomic','mob','sugoidekai');
 $alam = array('mountaint','beach','swamp','greenfield','paris','japan','italia','spinx','sea');
+$win = array('100.jpg','101.png','102.jpg','103.png','104.jpg');
 ?>
 
 <!DOCTYPE html>
@@ -17,46 +18,12 @@ $alam = array('mountaint','beach','swamp','greenfield','paris','japan','italia',
     <link rel="preload" as="image" href="img/anime/bocchi.webp">
     <link rel="preload" as="image" href="img/anime/csm.webp">
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        .container2 {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        }
-
-        .image {
-        display: block;
-        width: 100%;
-        height: 100%;
-        }
-
-        .overlay {
-            opacity: 0%;
-            box-sizing: border-box;
-        padding: 1rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #10b981;
-        overflow: scroll;
-        width: 100%;
-        height: 0;
-        transition-duration: 700ms;
-        }
-
-        .container2:hover .overlay {
-            opacity: 100%;
-        height: 100%;
-        }
-    </style>
 </head>
-<body>
+<body onload="startup()">
     <!-- Hero Section Start -->
-    <header id="home" class="pt-36 pb-32 bg-slate-100">
+    <header id="home">
         <div class="container">
-            
+            <h1 id="header-text" class="header-text">Butuh Rekomendasi Tempat Untuk Liburan?</h1>
         </div>
     </header>
     <!-- Hero Section End -->
@@ -65,19 +32,20 @@ $alam = array('mountaint','beach','swamp','greenfield','paris','japan','italia',
     <section id="main">
         <div class="container">
             <div class="parent">
-                <?php for($i = 0; $i < 18; $i++): ?>
+                <?php for($x = 0; $x < 3; $x++): ?>
+                <?php for($i = 0; $i < count($win); $i++): ?>
                 <div class="card">
                     <div class="card-content">
-                        <div class="container2">
-                            <img src="https://source.unsplash.com/720x480?<?=$alam[rand(0,8)]?>" alt="Avatar" loading="lazy" class="image">
-                            <div class="overlay">
-                                <div class="desc-title"><?=$alam[rand(0,8)]?></div>
+                        <div class="image-container">
+                            <img src="img/wisata/img<?=$win[$i]?>" alt="Avatar" loading="lazy">
+                            <div class="desc-container">
+                                <div class="desc-title"><?=$win[$i]?></div>
                                 <div class="desc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ipsum temporibus magnam quidem rem deleniti ducimus! Soluta fuga et est ipsam, aperiam, sit deleniti iste quaerat incidunt veritatis cum recusandae?</div>
-                                <!-- <div class="desc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis laborum optio est, unde harum numquam eaque at quam soluta? Similique sint omnis animi incidunt quae deserunt minus eos accusamus! Cumque voluptatem in eius architecto unde, inventore eum laudantium est dolorem quos adipisci at. Explicabo error illum, animi saepe maiores ex culpa totam asperiores dicta? Velit, ipsam. Ut culpa voluptates iusto consequuntur! Sapiente magni tenetur mollitia impedit similique eligendi dolores culpa iste perferendis cupiditate ex veritatis delectus id ut voluptas odio inventore rem deserunt praesentium, eveniet consequatur unde! Blanditiis tempore voluptatibus ex, odit quam molestiae, sed ullam quis nulla in eum delectus explicabo cumque quibusdam quidem sapiente! Repellat necessitatibus error ipsam culpa doloremque, saepe sunt ad, vitae eaque incidunt harum assumenda numquam recusandae dolores animi quod cupiditate ipsum eos nobis nam expedita consequatur. Deleniti, eum harum. Aspernatur dolorem quia explicabo doloremque unde officia exercitationem quo nisi illo inventore, ipsam quisquam ea aliquam tenetur facilis? Consequatur repellat atque accusamus commodi nesciunt perferendis blanditiis, iste dolore. Quis maxime illum fugit, itaque quasi cum dicta debitis omnis quibusdam aut suscipit iusto doloremque libero facilis distinctio perferendis labore. Nulla incidunt delectus autem maxime? Repellendus porro voluptatum dolorum error libero perferendis minima odit tempore tempora. Eius, laudantium et facilis possimus minima similique sequi incidunt rerum officia sapiente eligendi vitae consequuntur, quae dolore ratione delectus non dolor ea laborum qui quaerat dignissimos debitis modi odio! Aperiam illum blanditiis sunt eaque? Quas nesciunt ducimus ad deserunt earum eligendi impedit commodi sunt ullam assumenda, officiis sequi nobis exercitationem temporibus officia aliquam eos architecto maxime a obcaecati? Dicta debitis quibusdam molestiae nesciunt accusamus? Tempora dolores explicabo earum voluptatum, quae eveniet eius neque! Nulla praesentium quaerat veniam quisquam est tempore eligendi iste itaque veritatis. Esse deserunt nisi sed quia nostrum assumenda? Doloribus harum eius ad debitis quod quibusdam! At iusto maxime soluta iste, odio ratione! Totam doloremque obcaecati quae quam autem ullam, ea dolorum. Asperiores voluptatem minima alias culpa, amet accusantium facere, sequi temporibus facilis tempore harum veniam fuga sapiente non accusamus dolorem distinctio itaque! Quas obcaecati, aut facere maiores praesentium est molestiae doloribus maxime amet. Commodi ut quaerat sint aut qui maiores alias quibusdam provident. Minima sequi ea est, ullam corporis dolor ipsam maiores laboriosam libero, sed dicta quidem amet maxime ab quo obcaecati commodi adipisci sapiente cumque quisquam illo ratione illum. Est eaque rem, aperiam, a minima dolorem laboriosam debitis reprehenderit nam ullam praesentium, recusandae similique necessitatibus vero accusantium nisi. Ex veritatis modi corrupti, nostrum suscipit porro neque sit esse eaque dicta inventore magni, aliquam, sint perferendis vitae nam! Accusantium libero blanditiis totam aperiam error fugit asperiores earum labore? Omnis deserunt nulla alias nihil nostrum tempora, consequuntur veritatis? Sapiente nihil inventore consectetur, corrupti deleniti animi, sit in voluptates nobis ullam veritatis, repellendus esse blanditiis necessitatibus est incidunt. Quae hic qui nihil eveniet, itaque in, pariatur, quibusdam omnis dicta explicabo harum perspiciatis nesciunt atque aliquam deserunt veritatis voluptates distinctio? Cupiditate eligendi itaque incidunt reiciendis, ducimus aspernatur iusto quos beatae quo adipisci, magnam placeat! Impedit temporibus ad alias et voluptas ducimus id adipisci mollitia molestiae, in eum assumenda iure nulla animi dolorum ratione nihil odit excepturi cumque consequuntur. Enim eaque velit officia, similique iste quisquam, eius delectus beatae eos possimus veritatis vitae quaerat tempora veniam rerum aliquid. Officia, repellat labore deserunt veritatis omnis saepe quia ipsum quos praesentium quam quibusdam, aut corrupti aliquam quisquam nostrum aliquid, similique culpa! Possimus iste vero doloribus exercitationem, repudiandae repellendus perferendis quae magnam provident velit consequatur cumque eaque temporibus odit est praesentium magni, eum omnis aspernatur cupiditate assumenda. Sint, adipisci. Voluptatem, praesentium id. Iure aliquid ut dolores libero optio officia, cumque nobis omnis cum sunt dolore doloribus consequatur reprehenderit minima deserunt ex fugiat animi ea accusamus alias nemo. A suscipit dolores optio iste libero quia nam expedita eius consequatur id! Animi blanditiis iure molestias error debitis, repellendus quisquam dolorum quos optio facere dignissimos non consectetur ratione nisi neque, labore laboriosam similique expedita quod doloremque minus adipisci? Sint aliquam vel eligendi dolorem nesciunt eveniet quod, vitae modi voluptatum iusto corporis. Aut eaque laborum, repellendus expedita saepe, aperiam eos ad temporibus animi magnam commodi, autem cum deserunt omnis pariatur aliquid recusandae iure velit? Dolor quasi aliquam laborum culpa cumque. Labore possimus aliquam iste velit voluptate. Est eum nihil accusamus voluptatum in ex veritatis placeat eos sunt, nesciunt adipisci dolorum vel incidunt repudiandae sapiente laborum! Quisquam nisi perspiciatis laboriosam blanditiis illo tempora dicta, architecto, quis placeat earum distinctio suscipit excepturi, molestiae minus maiores consectetur totam. Et aspernatur maxime at autem minus enim rerum magnam dignissimos tenetur necessitatibus? Eaque illo illum totam doloribus delectus, enim labore cum deserunt harum error nobis eligendi necessitatibus amet unde suscipit natus temporibus, aspernatur omnis quos vitae! Dolorem ullam incidunt iure at animi repellat quo nobis, explicabo obcaecati id beatae aliquid pariatur aut officia excepturi laborum a debitis ex, dicta repudiandae officiis quis atque totam ab! Repellendus officiis inventore tenetur pariatur esse odit eos, tempora beatae obcaecati non sit temporibus, enim, expedita minima eius repudiandae sed distinctio veniam? Placeat nulla cumque adipisci doloribus voluptatibus, blanditiis impedit alias ut suscipit sed eius fugit veniam nam neque aliquam atque molestias. Asperiores doloribus nulla alias, iste ipsam culpa velit qui, quidem cum exercitationem vel adipisci ea libero ad perspiciatis deleniti odit mollitia explicabo? Assumenda temporibus dolorum, repellendus obcaecati qui ab tempore ut asperiores placeat earum distinctio aliquam, animi porro corrupti! Corporis quibusdam, itaque cum pariatur quam quod qui placeat delectus et minus, distinctio id quisquam velit. Voluptas officiis obcaecati voluptate voluptates, sequi minima magni repellendus cum! Quaerat quos, repellat aperiam animi totam ut voluptates laborum ea commodi numquam odit fugit illo eius est mollitia quo temporibus, architecto amet delectus. Repellat doloremque aperiam quasi eveniet iure assumenda. Esse veniam molestias eius magni quia tenetur est, quo, distinctio corrupti numquam eum velit nisi dignissimos modi quibusdam rerum atque. Eius illo quasi sed eveniet enim, sequi maiores quas excepturi minus nobis commodi quo impedit perferendis voluptates, officiis officia odio perspiciatis quam debitis? Voluptates recusandae, blanditiis eligendi quibusdam natus velit omnis magni vel dolores repellendus ut suscipit nihil, praesentium nobis. Veritatis.</div> -->
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php endfor; ?>
                 <?php endfor; ?>
             </div>
         </div>
@@ -87,10 +55,68 @@ $alam = array('mountaint','beach','swamp','greenfield','paris','japan','italia',
     <!-- Footer Start -->
     <footer>
         <div class="container">
-            <p class="footer-text">Made by Nizar menggunakan CSS biasa</p>
-            <p class="footer-text">Copyright &copy; 2023</p>
+            <div class="footer-container">
+                <div class="icon-container">
+                    <!-- youtube -->
+                    <a href="https://www.youtube.com" target="_blank" class="icon">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+
+                    <!-- bilibili -->
+                    <a href="https://www.bilibili.tv" target="_blank" class="icon">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20">
+                            <path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/>
+                        </svg>
+                    </a>
+
+                    <!-- facebook -->
+                    <a href="https://www.facebook.com" target="_blank" class="icon">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="https://www.instagram.com" target="_blank" class="icon">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20">
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                        </svg>
+                    </a>
+
+                    <!-- twitter -->
+                    <a href="https://www.twitter.com" target="_blank" class="icon">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-text">Made by Nizar menggunakan CSS biasa</p>
+                <p class="footer-text">Copyright &copy; 2023</p>
+            </div>
         </div>
     </footer>
     <!-- Footer End -->
+
+    <script>
+        function startup(){
+            const h1OnHeader = document.getElementById('header-text')
+
+            h1OnHeader.classList.add('startup')
+        }
+
+        window.onscroll = function(){
+            const h1OnHeader = document.getElementById('header-text')
+            const header = document.querySelector('header')
+            const fixedNav = header.offsetTop
+
+            if(window.pageYOffset > fixedNav){
+                h1OnHeader.classList.remove('startup')
+            }else{
+                h1OnHeader.classList.add('startup')
+            }
+        }
+    </script>
 </body>
 </html>
